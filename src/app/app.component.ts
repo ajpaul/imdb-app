@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavBarComponent } from './navbar/navbar.component';
 import { AppServices } from './shared/app.service';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';

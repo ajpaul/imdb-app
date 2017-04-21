@@ -1,11 +1,13 @@
 import { Routes } from '@angular/router';
 
-import { AboutComponent } from './about.component';
+
 import { HomeComponent } from './home.component';
-import { Error404Component } from './error404.component';
+import { Error404Component } from './errors/error404.component';
+import { ActorsComponent } from './actors/actors.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'movies', component: HomeComponent },
+  { path: 'actors', component: ActorsComponent},
+  { path: '', redirectTo: '/movies', pathMatch: 'full'},
   { path: '**', component: Error404Component }
 ];

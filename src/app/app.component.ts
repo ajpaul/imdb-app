@@ -11,7 +11,6 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Welcome to my app';
 
   data: Object;
 

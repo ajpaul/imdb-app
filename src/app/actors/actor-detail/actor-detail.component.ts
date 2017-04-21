@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { ActorsService } from '../../shared/actors.service';
+import { AppServices } from '../../shared/app.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -11,12 +11,18 @@ export class ActorDetailComponent {
 
     actor:any;
 
-    // constructor(private actorsService:ActorsService, private route:ActivatedRoute){
+    constructor(private appServices:AppServices, private route:ActivatedRoute){
 
-    // }
+    }
 
     ngOnInit() {
-        //this.actor = this.actorsService.getSpecificActor(this.route.snapshot.params['id']);
+
+        this.appServices.getSpecificActor(this.route.snapshot.params['id'])
+           .subscribe(
+                (res) => {
+                    this.actor = this.appServices.convertActorToObject(res);
+                }
+        );
     }
 
 }

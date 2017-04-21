@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 
 //components
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home.component';
 import { Error404Component } from './errors/error404.component';
 import { NavBarComponent } from './navbar/navbar.component';
 import { ActorsComponent } from './actors/actors.component';
@@ -25,7 +24,6 @@ import { routes } from './routes';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     Error404Component,
     NavBarComponent,
     ActorsComponent,

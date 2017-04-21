@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { MoviesService } from '../../shared/movies.service';
-//import { JoinService } from '../../shared/join.service';
+import { AppServices } from '../../shared/app.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -11,18 +10,20 @@ import { ActivatedRoute } from '@angular/router';
 
 export class MovieDetailComponent implements OnInit {
 
-    movie:any;
-    res = {};
+    movie;
 
-    // constructor(private moviesService:MoviesService, private route:ActivatedRoute, private joinService:JoinService){
+    constructor(private appServices:AppServices, private route:ActivatedRoute){
 
-    //     joinService.getJoinedData().subscribe(data => this.res = data);
-
-    //     console.log(this.res);
-    // }
+    }
 
     ngOnInit() {
-    //     this.movie = this.moviesService.getSpecificMovie(this.route.snapshot.params['id']);
+
+        this.appServices.getSpecificMovie(this.route.snapshot.params['id'])
+           .subscribe(
+                (res) => {
+                    this.movie = this.appServices.convertMovieToObject(res);
+                }
+        );
     }
 
 }

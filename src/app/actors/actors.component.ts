@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { ActorsService } from '../shared/actors.service';
+import { AppServices } from '../shared/app.service';
 
 @Component({
     templateUrl: './actors.component.html',
@@ -8,10 +8,37 @@ import { Component } from '@angular/core';
 
 export class ActorsComponent    {
 
-    data: any[];
+    data: Object[] = [];
 
-    // constructor(private actorsService: ActorsService) {
-    //     this.data = actorsService.getAllActors(); 
-    // }
+    constructor(private appServices: AppServices) {
+    //     this.appServices.getSpecificMovie('terminator')
+    //       .subscribe(
+    //       (res) => {
+    //           this.data2 = res;
+    //       }
+    //   );
+
+      this.getAllActors();
+    }
+
+    getAllActors() {
+
+        for(let value of ACTORS){
+            this.appServices.getSpecificActor(value)
+                .subscribe(
+                (res) => {
+                    this.data.push(this.appServices.convertActorToObject(res));
+                }
+            );   
+        }
+    }
 
 }
+
+const ACTORS = [
+    'arnold_schwarzenegger',
+    'halle_berry',
+    'jamie_lee_curtis',
+    'john_cleese',
+    'kevin_kline'
+];

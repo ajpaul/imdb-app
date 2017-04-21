@@ -1,4 +1,7 @@
 <div class="well" [routerLink]="['/actors', actor.id]">
+
+    <img src="../../assets/images/{{actor.id}}.jpg" alt="{{actor.name}}">
+
     <h2>{{actor.name}}</h2>
     <h3>{{actor.birth | date}}</h3>
     <p>{{actor.synopsis}}</p>

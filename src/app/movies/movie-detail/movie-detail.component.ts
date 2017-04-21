@@ -13,6 +13,7 @@ export class MovieDetailComponent implements OnInit {
     movie: Object;
     joinedData: String;
     joinedDataArray: String[];
+    featuredActors: String[] = [];
 
     constructor(private appServices:AppServices, private route:ActivatedRoute){
         
@@ -49,14 +50,10 @@ export class MovieDetailComponent implements OnInit {
 
     findActorsInCurrentMovie(movie) {
 
-        let featuredActors: String[] = [];
-
         for(let row of this.joinedDataArray){
             if(row.includes(movie.id))
-                featuredActors.push(row.split('|')[0]);
+                this.featuredActors.push(row.split('|')[0]);
         }
-
-        console.log(featuredActors);
     }
 
 }

@@ -1,4 +1,7 @@
 <div class="well" [routerLink]="['/movies', movie.id]">
+    
+    <img src="../../assets/images/{{movie.id}}.jpg" alt="{{movie.title}}">
+    
     <h2>{{movie.title}}</h2>
     <h3>{{movie.release_date}}</h3>
     <p>{{movie.synopsis}}</p>

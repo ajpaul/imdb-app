@@ -1,3 +1,14 @@
 <h1>Movie Detail</h1>
 
 {{movie?.title}}
+
+<img *ngIf="movie" src="../../assets/images/{{movie?.id}}.jpg" alt="{{movie?.id}}">
+
+<div *ngIf="featuredActors">
+<img
+    *ngFor='let record of featuredActors'
+    src="../../assets/images/{{record}}.jpg" 
+    alt="record"
+    [routerLink]="['/actors', record]"
+>
+</div>

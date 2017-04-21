@@ -1,5 +1,23 @@
 .well {
-    height: 300px;
-    max-height: 300px;
-    text-overflow: ellipsis;
+    height: 400px;
+    max-height: 400px;
+    width: 270px;
+    position: relative;
+    cursor: pointer;
+}
+
+.actor-info {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.well > img {
+    position: absolute;
+}
+
+.img-thumbnail {
+    display: block;
 }

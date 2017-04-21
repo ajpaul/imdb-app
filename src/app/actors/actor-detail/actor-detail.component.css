@@ -1,0 +1,18 @@
+h2 {
+    margin: 20px 0 0 20px;
+}
+
+.actor-info {
+    display: inline-block;
+    background-color: white;
+    border-radius: 3px;
+    padding: 10px;
+    margin-left: 20px;
+    width: calc(100% - 250px);
+    vertical-align: top;
+}
+
+.row {
+    padding: 20px;
+    width: 100%;
+}

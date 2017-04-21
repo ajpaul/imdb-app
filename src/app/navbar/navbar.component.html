@@ -12,19 +12,6 @@
             <a routerLink="/actors" routerLinkActive="active">Actors</a>
         </li>
       </ul>
-
-      <div class="navbar-header navbar-right">
-      </div>
-
-      <form id="searchForm" (ngSubmit)="searchMovie(searchTerm)"  class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" [(ngModel)]="searchTerm" name="searchTerm" class="form-control" placeholder="Search Movies" >
-        </div>
-        <button class="btn btn-default" >
-          Search
-        </button>
-      </form>
-
     </div>
   </div>
 </div>

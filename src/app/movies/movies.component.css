@@ -1,0 +1,54 @@
+ h1 {
+    font-family: 'Archivo Narrow', sans-serif;
+ }
+
+ .retro {
+     margin-bottom: 20px;
+ }
+ 
+ movie-thumbnail-component {
+    opacity: 0;
+    -webkit-animation: fadeIn 0.5s 1;
+    animation: fadeIn 0.5s 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+ movie-thumbnail-component:nth-child(5n+1) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+ movie-thumbnail-component:nth-child(5n+2) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+ movie-thumbnail-component:nth-child(5n+3) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+ movie-thumbnail-component:nth-child(5n+4) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+ movie-thumbnail-component:nth-child(5n+5) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+ movie-thumbnail-component:nth-child(5n+6) {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}

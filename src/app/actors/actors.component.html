@@ -1,7 +1,8 @@
-<h1>Actors</h1>
+<div class="retro">Hollywood's Best!</div>
 
-<actor-thumbnail-component 
-    *ngFor="let a of data" 
-    [actor]="a"
-    class="col-xs-12 col-md-6">
-</actor-thumbnail-component>
+<div class="flex-parent">
+    <actor-thumbnail-component 
+        *ngFor="let a of data" 
+        [actor]="a">
+    </actor-thumbnail-component>
+</div>

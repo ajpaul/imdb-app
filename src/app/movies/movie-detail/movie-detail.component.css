@@ -1,0 +1,31 @@
+.featured-actors {
+    margin-top: 20px;
+}
+
+.featured-actors > img {
+    cursor: pointer;
+    margin: 10px;
+}
+
+.well {
+    width: auto;
+}
+
+h2 {
+    margin: 20px 0 0 20px;
+}
+
+.movie-detail-info {
+    display: inline-block;
+    background-color: white;
+    border-radius: 3px;
+    padding: 10px;
+    margin-left: 20px;
+    width: calc(100% - 250px);
+    vertical-align: top;
+}
+
+.row {
+    padding: 20px;
+    width: 100%;
+}

@@ -1,14 +1,22 @@
-<h1>Movie Detail</h1>
+<h2>Movie Detail</h2>
 
-{{movie?.title}}
+<div class="row">
+    <img *ngIf="movie" src="../../assets/images/{{movie?.id}}.jpg" alt="{{movie?.id}}" class="img-thumbnail">
 
-<img *ngIf="movie" src="../../assets/images/{{movie?.id}}.jpg" alt="{{movie?.id}}">
+    <div *ngIf="movie" class="movie-detail-info">
+        <h3>{{movie.title}}</h3>
+        <h4>{{movie.release_date}}</h4>
+        <p>{{movie.synopsis}}</p>
+    </div>
+</div>
 
-<div *ngIf="featuredActors">
-<img
-    *ngFor='let record of featuredActors'
-    src="../../assets/images/{{record}}.jpg" 
-    alt="record"
-    [routerLink]="['/actors', record]"
->
+<h2>Featured Actors/Actresses</h2>
+<div class="featured-actors well" *ngIf="featuredActors">
+    <img
+        *ngFor='let record of featuredActors'
+        src="../../assets/images/{{record}}.jpg" 
+        alt="record"
+        [routerLink]="['/actors', record]"
+        class="img-thumbnail"
+    >
 </div>

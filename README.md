@@ -2,7 +2,6 @@
 
 ## Made by: Adam Paul
 ## Atlanta, GA
-## ajpaul89@gmail.com / (205) - 994 - 0725
 
 Feel free to check out my Github at: `www.github.com/ajpaul` or my 500px at `www.500px.com/ajp0032` or my Twitter at `www.twitter.com/adamjpaul` to learn more about me.
 
